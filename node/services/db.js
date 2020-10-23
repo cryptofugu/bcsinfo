@@ -26,9 +26,9 @@ class DBService extends Service {
     this.#rpcOptions = Object.assign({
       protocol: 'http',
       host: 'localhost',
-      port: 3889,
-      user: 'user',
-      password: 'password'
+      port: 3669,
+      user: 'rpcuser',
+      password: 'rpcpassword'
     }, options.rpc)
     this.node.on('stopping', () => {
       this.logger.warn('DB Service: node is stopping, gently closing the database. Please wait, this could take a while')

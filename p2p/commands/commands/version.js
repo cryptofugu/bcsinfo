@@ -8,13 +8,13 @@ class VersionMessage extends Message {
     services = 13n,
     nonce = getNonce(),
     timestamp = Math.floor(Date.now() / 1000),
-    subversion = `/qtuminfo:${packageInfo.version}/`,
+    subversion = `/bcsinfo:${packageInfo.version}/`,
     startHeight = 0,
     relay = true,
     ...options
   }) {
     super('version', options)
-    this.version = options.protocolVersion || 70017
+    this.version = options.protocolVersion || 72020
     this.nonce = nonce
     this.services = services
     this.timestamp = timestamp
